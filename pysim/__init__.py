@@ -9,4 +9,4 @@ from importlib.metadata import version
 __version__ = '0.0.1'
 
 # Populate package namespace
-from pysim.pysim import Simulink, get_knee_jerk_model
+from pysim.pysim import Simulink, whereis_knee_jerk_model, plot
