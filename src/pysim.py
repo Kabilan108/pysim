@@ -56,7 +56,7 @@ class Simulink:
         self.name = self.path.stem
 
         # Store Output variables
-        self.outvars = np.unique(outvars + ['tout'])
+        self.outvars = np.unique(outvars + ['tout']).tolist()
         
     def connect(self) -> None:
         """
@@ -116,8 +116,11 @@ class Simulink:
         print("[bold green]Reading output variables...[/bold green]")
         out = {}
         for var in self.outvars:
-            self.eng.eval(f"{var} = out.{var};", nargout=0)  # type: ignore
-            out[var] = np.asarray(self.eng.workspace[var])  # type: ignore
+            try:
+                self.eng.eval(f"{var} = out.{var};", nargout=0)  # type: ignore
+                out[var] = np.asarray(self.eng.workspace[var]).flatten()  # type: ignore
+            except:
+                print(f"[bold red]Could not read '{var}'[/bold red]")
 
         return out
 
