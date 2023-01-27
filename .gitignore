@@ -1,3 +1,4 @@
 *.slxc
+*.slx.autosave
 slprj/
 __pycache__/
