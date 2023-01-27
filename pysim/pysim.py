@@ -28,11 +28,19 @@ class Simulink:
     ----------=
     name : str
         Name of the model
+    eng : matlab.engine.MatlabEngine
+        MATLAB engine
 
     Methods
     -------
     connect()
         Connect to MATLAB engine, if not already connected
+    disconnect()
+        Disconnect from MATLAB engine
+    set_params(params: Dict[str, Union[str, float, int]])
+        Set model parameters
+    run(start: int=0, stop: int=30)
+        Run model
     """
 
     def __init__(
