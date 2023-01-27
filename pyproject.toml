@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools", "setuptools_scm", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pysim"
+authors = [
+    {name = "Tony Kabilan Okeke", email = "tonykabilanokeke@gmail.com"}
+]
+description = "Wrapper for MATLAB Engine API to run Simulink models from Python"
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["simulink", "matlab", "modelling", "simulation"]
+classifiers = [
+    "Programming Language :: Python :: 3"
+]
+dependencies = [
+    "rich",
+    "numpy",
+    "matplotlib",
+    "importlib-metadata; python_version >= '3.8'"
+]
+version = "0.1.0"
