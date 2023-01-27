@@ -6,7 +6,7 @@ pysim - Python Wrapper for Simulink
 from importlib.metadata import version
 
 # Package metadata
-__version__ = '0.0.1'
+__version__ = version(__name__)
 
 # Populate package namespace
 from pysim.pysim import Simulink, whereis_knee_jerk_model, plot
