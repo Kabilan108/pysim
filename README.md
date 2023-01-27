@@ -21,7 +21,6 @@ pip install .
 
 ### Simulink Model
 
-
 ### Running the model from Python
 
 ```python
