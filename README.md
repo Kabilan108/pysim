@@ -21,13 +21,9 @@ pip install .
 
 ### Simulink Model
 
+See [this](docs/examples.ipynb) notebook for a more detailed example.
+
 ### Running the model from Python
-
-```python
-
-```
-
-### Visualizing the results
 
 ```python
 
