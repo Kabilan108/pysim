@@ -11,6 +11,7 @@ signals that you want to log.
 """
 
 # Imports from standard library
+from importlib import resources
 from typing import Union, Dict
 from pathlib import Path
 
@@ -177,3 +178,17 @@ class Simulink:
     
     def __del__(self) -> None:
         self.disconnect()
+
+
+def get_knee_jerk_model() -> Simulink:
+    """
+    Get the knee jerk model
+
+    Returns
+    -------
+    Simulink
+        Knee jerk model
+    """
+
+    with resources.path('pysim.models', 'knee_jerk_v1.slx') as path:
+        return Simulink(path)
