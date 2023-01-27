@@ -2,3 +2,4 @@
 *.slx.autosave
 slprj/
 __pycache__/
+*.egg-info/
